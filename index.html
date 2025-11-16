@@ -3,171 +3,270 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Perth — CV | Quantitative Trader & Founder</title>
+  <title>Investment Banking — Financial Model (Perth)</title>
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
-    :root{
-      --navy:#071833;
-      --gold:#b88633;
-      --muted:#6b7b8a;
-      --card:#f7f9fb;
-      --glass: rgba(255,255,255,0.06);
-      --max-width:1000px;
-    }
+    :root{--navy:#071833;--gold:#b88633;--muted:#6b7b8a;--card:#f7f9fb;--bg:linear-gradient(180deg,#061426,#07223a);}    
     *{box-sizing:border-box}
-    html,body{height:100%;margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial}
-    body{background:linear-gradient(180deg,var(--navy) 0%, #0d2a4a 45%, #0b2340 100%);color:#e8eef6;padding:40px;display:flex;align-items:center;justify-content:center}
-    .wrap{width:100%;max-width:var(--max-width);background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:14px;box-shadow:0 10px 30px rgba(2,6,23,0.6);overflow:hidden;border:1px solid rgba(255,255,255,0.04)}
-    header{display:flex;gap:24px;padding:28px 36px;background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.00));align-items:center}
-    .avatar{width:96px;height:96px;border-radius:12px;background:linear-gradient(135deg,var(--gold),#f0c77a);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--navy);font-family:Merriweather;font-size:28px}
-    .head-meta{flex:1}
-    h1{margin:0;font-family:Merriweather,serif;font-size:22px;letter-spacing:0.4px}
-    .title{color:var(--gold);font-weight:600;margin-top:6px}
-    .sub{margin-top:8px;color:var(--muted);font-size:14px}
-    .contact{display:flex;gap:12px;align-items:center}
-    .btn{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:8px 12px;border-radius:8px;font-size:13px;color:#dff2ff;cursor:pointer}
-
-    main{display:grid;grid-template-columns:1fr 360px;gap:28px;padding:28px 36px}
-    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.00));padding:20px;border-radius:10px;border:1px solid rgba(255,255,255,0.03)}
-    .section{margin-bottom:18px}
-    h2{font-family:Merriweather,serif;margin:0 0 12px 0;font-size:16px;color:#fff}
-    p.lead{color: #d6e6f8;margin:0 0 12px 0}
-    ul{margin:8px 0 0 18px;padding:0;color:#d1e6ff}
-    li{margin-bottom:8px}
-
-    /* Experience timeline */
-    .exp{display:flex;flex-direction:column;gap:12px}
-    .job{display:flex;gap:12px}
-    .job .info{flex:1}
-    .muted{color:var(--muted);font-size:13px}
-
-    /* sidebar */
-    aside{display:flex;flex-direction:column;gap:18px}
-    .skill-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
-    .skill{background:rgba(255,255,255,0.02);padding:8px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);font-size:13px}
-
-    footer{padding:18px 36px;background:linear-gradient(90deg, rgba(255,255,255,0.00), rgba(255,255,255,0.01));color:var(--muted);display:flex;justify-content:space-between;align-items:center;font-size:13px}
-
-    @media (max-width:900px){main{grid-template-columns:1fr;}
-      aside{order:2}
-    }
+    body{margin:0;font-family:Inter,Arial;background:var(--bg);color:#e6eef9;padding:28px}
+    .container{max-width:1100px;margin:0 auto;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));border-radius:12px;padding:20px;border:1px solid rgba(255,255,255,0.04)}
+    header{display:flex;align-items:center;gap:16px}
+    .logo{width:72px;height:72px;border-radius:10px;background:linear-gradient(135deg,var(--gold),#f0c77a);display:flex;align-items:center;justify-content:center;color:var(--navy);font-weight:700;font-family:Merriweather}
+    h1{margin:0;font-family:Merriweather;font-size:20px}
+    p.lead{color:var(--muted);margin:4px 0 16px}
+    .grid{display:grid;grid-template-columns:360px 1fr;gap:18px}
+    .card{background:rgba(255,255,255,0.02);padding:14px;border-radius:10px;border:1px solid rgba(255,255,255,0.03)}
+    label{display:block;font-size:13px;color:var(--muted);margin-bottom:6px}
+    input[type=number], input[type=text], select{width:100%;padding:8px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:#eaf6ff}
+    .row{display:flex;gap:8px}
+    button{background:var(--gold);border:none;padding:8px 12px;border-radius:8px;color:var(--navy);font-weight:600;cursor:pointer}
+    .small{font-size:13px;color:var(--muted)}
+    table{width:100%;border-collapse:collapse;margin-top:8px}
+    th,td{padding:6px 8px;border-bottom:1px dashed rgba(255,255,255,0.04);text-align:right}
+    th{text-align:left;font-weight:600}
+    canvas{width:100%;height:180px;background:transparent}
+    .results{display:flex;gap:12px;flex-wrap:wrap}
+    .kpi{background:rgba(255,255,255,0.02);padding:10px;border-radius:8px;min-width:150px}
+    @media(max-width:980px){.grid{grid-template-columns:1fr}} 
   </style>
 </head>
 <body>
-  <div class="wrap" role="document">
+  <div class="container">
     <header>
-      <div class="avatar" aria-hidden>PR</div>
-      <div class="head-meta">
-        <h1>Perth (Pongsakorn Chotpunyavorakul)</h1>
-        <div class="title">Founder • Quantitative Trader • Portfolio Manager</div>
-        <div class="sub">Bangkok, Thailand · 19 · English / Thai · Available for advisory & partnerships</div>
-        <div style="margin-top:12px;display:flex;gap:10px;align-items:center">
-          <div class="contact muted">perth@email.example · +66 8x xxx xxxx · linkedin.com/in/perth</div>
-          <button class="btn" onclick="window.print()">Print / Save PDF</button>
-        </div>
+      <div class="logo">PR</div>
+      <div>
+        <h1>Investment Model — Bank-style Financial Toolkit</h1>
+        <p class="lead">Simple DCF / IRR / Payback calculator with customizable assumptions. Export CSV and print-ready. Designed for banking-style presentations.</p>
       </div>
     </header>
 
-    <main>
-      <section>
-        <div class="card section">
-          <h2>Professional Summary</h2>
-          <p class="lead">Data-driven quantitative trader and founder with experience building algorithmic trading systems, portfolio management services, and copy-trading. Proven ability to design, test and run strategies with verified results and systematic risk controls. Strong domain knowledge in macro news analysis, execution automation, and client-facing performance transparency.</p>
+    <div class="grid" style="margin-top:14px">
+      <aside class="card">
+        <h3 style="margin-top:0">Assumptions</h3>
+        <label>Forecast Horizon (years)</label>
+        <input id="years" type="number" min="1" max="30" value="7">
+
+        <label style="margin-top:8px">Initial Revenue (Year 0)</label>
+        <input id="rev0" type="number" value="1000000">
+
+        <label style="margin-top:8px">Annual Revenue Growth (%) (can be decimal, comma-separated for each year)</label>
+        <input id="growth" type="text" value="20">
+
+        <label style="margin-top:8px">EBIT Margin (%)</label>
+        <input id="ebitm" type="number" value="25">
+
+        <label style="margin-top:8px">Tax Rate (%)</label>
+        <input id="tax" type="number" value="20">
+
+        <label style="margin-top:8px">Annual Capex (as % of Revenue)</label>
+        <input id="capex" type="number" value="5">
+
+        <label style="margin-top:8px">Change in Working Capital (as % of Revenue)</label>
+        <input id="wc" type="number" value="2">
+
+        <label style="margin-top:8px">Discount Rate (%)</label>
+        <input id="disc" type="number" value="12">
+
+        <label style="margin-top:8px">Terminal Growth Rate (%)</label>
+        <input id="tg" type="number" value="3">
+
+        <div style="margin-top:12px;display:flex;gap:8px">
+          <button id="run">Run Model</button>
+          <button id="export">Export CSV</button>
+          <button id="print">Print</button>
         </div>
 
-        <div class="card section">
-          <h2>Selected Experience</h2>
-          <div class="exp">
-            <div class="job">
-              <div class="info">
-                <strong>Founder — Rowric (Trading Research & Dev)</strong>
-                <div class="muted">2024 — Present · Bangkok</div>
-                <p class="muted">Lead research and development of quantitative strategies, system architecture, and live performance tracking. Mentor traders and provide copy-trading services.</p>
-              </div>
-            </div>
-
-            <div class="job">
-              <div class="info">
-                <strong>Owner (50.5%) — OPLN</strong>
-                <div class="muted">2025 — Present</div>
-                <p class="muted">Strategic investor and operator — governance, capital allocation, and long-term value creation.</p>
-              </div>
-            </div>
-
-            <div class="job">
-              <div class="info">
-                <strong>Copy Trading Provider — GMI Markets</strong>
-                <div class="muted">2024 — Present</div>
-                <p class="muted">Operate verified live track record for subscribers; emphasise transparency & risk management using Myfxbook and performance reporting.</p>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <div class="card section">
-          <h2>Education & Certifications</h2>
-          <ul>
-            <li>Self-directed study — Quantitative Finance, Algorithmic Trading, Risk Management</li>
-            <li>Certifications / courses: (list any relevant: Python, Data Science, Trading platforms)</li>
-          </ul>
-        </div>
-
-        <div class="card section">
-          <h2>Key Projects & Achievements</h2>
-          <ul>
-            <li>Designed and implemented a working trading system with verified test results and real-world performance.</li>
-            <li>Built a copy-trading service with live subscriber performance reporting.</li>
-            <li>Developed news-analysis frameworks used for trading signals and client education.</li>
-          </ul>
-        </div>
-
-      </section>
-
-      <aside>
-        <div class="card">
-          <h2>Core Skills</h2>
-          <div class="skill-grid">
-            <div class="skill">Quantitative Analysis</div>
-            <div class="skill">Python (incl. automation)</div>
-            <div class="skill">Algorithmic Trading</div>
-            <div class="skill">Risk Management</div>
-            <div class="skill">Strategy Dev & Backtesting</div>
-            <div class="skill">QuantConnect & Platforms</div>
-            <div class="skill">Client Advisory & Copy Trading</div>
-            <div class="skill">Performance Reporting</div>
-          </div>
-        </div>
-
-        <div class="card">
-          <h2>Interests</h2>
-          <p class="muted">Finance, Supercars (preference for UK/US/German brands), Watches, Formula One, Luxury fashion (Tom Ford), Business strategy.</p>
-        </div>
-
-        <div class="card">
-          <h2>Languages</h2>
-          <ul>
-            <li>Thai — Native</li>
-            <li>English — Professional (working on improvement for business communication)</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h2>Contact & Availability</h2>
-          <p class="muted">Open to advisory roles, partnerships, mentorship enquiries and portfolio management clients. Available for calls most mornings (Bangkok time).</p>
-          <div style="display:flex;gap:8px;margin-top:10px">
-            <a class="btn" href="#contact" role="button">Request Intro</a>
-            <a class="btn" href="#" onclick="window.print();return false;">Download</a>
-          </div>
-        </div>
+        <p class="small" style="margin-top:12px">Tip: for varying growth rates, enter comma-separated values like "20,15,10,8". Missing years will use the last value entered.</p>
       </aside>
 
-    </main>
+      <main>
+        <div class="card">
+          <h3 style="margin-top:0">Outputs</h3>
+          <div class="results" id="kpis" style="margin-bottom:8px">
+            <div class="kpi"><div class="small">NPV (Discounted FCF)</div><div id="npv" style="font-weight:700;font-size:18px">-</div></div>
+            <div class="kpi"><div class="small">IRR</div><div id="irr" style="font-weight:700;font-size:18px">-</div></div>
+            <div class="kpi"><div class="small">Payback (yrs)</div><div id="payback" style="font-weight:700;font-size:18px">-</div></div>
+            <div class="kpi"><div class="small">Terminal Value</div><div id="tv" style="font-weight:700;font-size:18px">-</div></div>
+          </div>
 
-    <footer>
-      <div>Designed for a professional institutional look • Navy & Gold theme</div>
-      <div class="muted">Last updated: Nov 16, 2025</div>
-    </footer>
+          <div style="display:flex;gap:18px;flex-wrap:wrap">
+            <div style="flex:1;min-width:380px">
+              <h4 style="margin:6px 0">Projected Free Cash Flow (Table)</h4>
+              <div id="table-wrap" style="overflow:auto;max-height:260px"></div>
+            </div>
+            <div style="width:320px">
+              <h4 style="margin:6px 0">FCF Chart</h4>
+              <canvas id="chart"></canvas>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <footer style="margin-top:14px;text-align:right;color:var(--muted)">Perth • Last updated: Nov 16, 2025</footer>
   </div>
+
+  <script>
+    // Utility functions
+    function parseGrowth(input, years){
+      if(!input) return Array(years).fill(0);
+      const parts = input.split(',').map(s=>parseFloat(s.trim())).filter(x=>!isNaN(x));
+      if(parts.length===0) return Array(years).fill(0);
+      const out=[];
+      for(let i=0;i<years;i++) out.push(parts[Math.min(i, parts.length-1)]);
+      return out;
+    }
+
+    function format(x){return (x===null||x===undefined)?'-':x.toLocaleString(undefined,{maximumFractionDigits:0});}
+    function formatPct(x){if(x===null||x===undefined) return '-'; return (x*100).toFixed(1)+'%';}
+
+    function computeModel(){
+      const years = parseInt(document.getElementById('years').value||7);
+      const rev0 = parseFloat(document.getElementById('rev0').value||0);
+      const growths = parseGrowth(document.getElementById('growth').value, years);
+      const ebitm = parseFloat(document.getElementById('ebitm').value||0)/100;
+      const tax = parseFloat(document.getElementById('tax').value||0)/100;
+      const capexPct = parseFloat(document.getElementById('capex').value||0)/100;
+      const wcPct = parseFloat(document.getElementById('wc').value||0)/100;
+      const disc = parseFloat(document.getElementById('disc').value||10)/100;
+      const tg = parseFloat(document.getElementById('tg').value||2)/100;
+
+      // build revenue series
+      const rev = [];
+      let r = rev0;
+      for(let i=0;i<years;i++){
+        const g = growths[i]/100;
+        r = r*(1+g);
+        rev.push(r);
+      }
+
+      const ebit = rev.map(v=>v*ebitm);
+      const taxCash = ebit.map((e,i)=> Math.max(e,0)*tax);
+      const capex = rev.map(v=>v*capexPct);
+      const wc = rev.map(v=>v*wcPct);
+      const fcf = rev.map((v,i)=> ebit[i] - taxCash[i] - capex[i] - wc[i]);
+
+      // terminal value using perpetuity on year N with FCF_N * (1+tg)/(disc - tg)
+      const fcfN = fcf[fcf.length-1];
+      const terminalValue = (fcfN*(1+tg))/(Math.max(disc - tg, 1e-6));
+
+      // discounted cash flows
+      const discounted = fcf.map((c,i)=> c / Math.pow(1+disc, i+1));
+      const discountedTV = terminalValue / Math.pow(1+disc, years);
+      const npv = discounted.reduce((a,b)=>a+b,0) + discountedTV;
+
+      // IRR (including initial outflow at year 0 of -rev0? For project IRR we use series with initial investment = -rev0*0? We'll compute IRR of FCF series with initial = -rev0)
+      const cashflows = [ -rev0, ...fcf.map((v,i)=>v) ];
+      const irr = tryIrr(cashflows);
+
+      // payback: years to recover initial investment (simple cumulative)
+      let cum = -cashflows[0];
+      let payback = null;
+      for(let i=1;i<cashflows.length;i++){
+        cum -= cashflows[i]; // since cashflows[i] is inflow
+        if(cum<=0){ payback = i; break; }
+      }
+
+      return {years, rev, ebit, taxCash, capex, wc, fcf, terminalValue, npv, irr, payback, discounted, discountedTV, cashflows};
+    }
+
+    // IRR solver using bisection + secant fallback
+    function npvForRate(cfs, rate){ return cfs.reduce((s,c,i)=> s + c / Math.pow(1+rate, i), 0); }
+    function tryIrr(cfs){
+      let low=-0.9999, high=1.0;
+      let fLow=npvForRate(cfs,low), fHigh=npvForRate(cfs,high);
+      if(Math.abs(fLow)<1e-8) return low;
+      if(Math.abs(fHigh)<1e-8) return high;
+      if(fLow*fHigh>0){
+        // expand search
+        for(let i=0;i<50;i++){ high += 1.0; fHigh=npvForRate(cfs,high); if(fLow*fHigh<=0) break; }
+        if(fLow*fHigh>0) return null;
+      }
+      let mid=null;
+      for(let i=0;i<80;i++){
+        mid = (low+high)/2;
+        const fMid = npvForRate(cfs,mid);
+        if(Math.abs(fMid)<1e-6) return mid;
+        if(fLow * fMid < 0){ high = mid; fHigh = fMid; } else { low = mid; fLow = fMid; }
+      }
+      return mid;
+    }
+
+    // render table
+    function renderTable(model){
+      const wrap = document.getElementById('table-wrap');
+      const years = model.years;
+      let html = '<table><thead><tr><th>Year</th>';
+      for(let i=1;i<=years;i++) html += '<th>Y+'+i+'</th>';
+      html += '</tr></thead><tbody>';
+      html += '<tr><th>Revenue</th>' + model.rev.map(v=>'<td>'+format(v)+'</td>').join('') + '</tr>';
+      html += '<tr><th>EBIT</th>' + model.ebit.map(v=>'<td>'+format(v)+'</td>').join('') + '</tr>';
+      html += '<tr><th>Tax</th>' + model.taxCash.map(v=>'<td>'+format(v)+'</td>').join('') + '</tr>';
+      html += '<tr><th>Capex</th>' + model.capex.map(v=>'<td>'+format(v)+'</td>').join('') + '</tr>';
+      html += '<tr><th>ΔWC</th>' + model.wc.map(v=>'<td>'+format(v)+'</td>').join('') + '</tr>';
+      html += '<tr><th><strong>Free Cash Flow</strong></th>' + model.fcf.map(v=>'<td><strong>'+format(v)+'</strong></td>').join('') + '</tr>';
+      html += '</tbody></table>';
+      wrap.innerHTML = html;
+    }
+
+    // simple bar chart renderer
+    function drawChart(model){
+      const c = document.getElementById('chart');
+      c.width = c.clientWidth; c.height = c.clientHeight;
+      const ctx = c.getContext('2d'); ctx.clearRect(0,0,c.width,c.height);
+      const data = model.fcf;
+      const max = Math.max(...data.map(d=>Math.abs(d)), 1);
+      const pad = 26; const w = c.width; const h = c.height;
+      const barW = (w - pad*2) / data.length * 0.7;
+      for(let i=0;i<data.length;i++){
+        const x = pad + i*((w-pad*2)/data.length) + ((w-pad*2)/data.length - barW)/2;
+        const barH = (data[i]/max) * (h - 60);
+        const y = h - 40 - Math.max(0,barH);
+        ctx.fillStyle = '#e6f6ff';
+        ctx.fillRect(x,y,barW,Math.abs(barH));
+        ctx.fillStyle = 'rgba(255,255,255,0.6)';
+        ctx.fillText('Y+'+(i+1), x, h-18);
+        ctx.fillText(Math.round(data[i]).toLocaleString(), x, y-6);
+      }
+    }
+
+    function renderKPIs(m){
+      document.getElementById('npv').innerText = format(Math.round(m.npv));
+      document.getElementById('irr').innerText = m.irr ? ( (m.irr*100).toFixed(2) + '%' ) : '-';
+      document.getElementById('payback').innerText = m.payback ? (m.payback + ' yrs') : '-';
+      document.getElementById('tv').innerText = format(Math.round(m.terminalValue));
+    }
+
+    document.getElementById('run').addEventListener('click',()=>{
+      const m = computeModel();
+      // compute derived arrays expected by renderTable
+      // recompute taxCash, capex, wc inside computeModel? We didn't return taxCash etc earlier; let's rebuild
+      // but computeModel returns them
+      renderTable(m);
+      drawChart(m);
+      renderKPIs(m);
+    });
+
+    document.getElementById('print').addEventListener('click',()=> window.print());
+
+    document.getElementById('export').addEventListener('click',()=>{
+      const m = computeModel();
+      const years = m.years;
+      let csv = 'Line,' + Array.from({length:years},(_,i)=>'Y+'+(i+1)).join(',') + '\n';
+      csv += 'Revenue,' + m.rev.join(',') + '\n';
+      csv += 'EBIT,' + m.ebit.join(',') + '\n';
+      csv += 'Tax,' + m.taxCash.join(',') + '\n';
+      csv += 'Capex,' + m.capex.join(',') + '\n';
+      csv += 'ΔWC,' + m.wc.join(',') + '\n';
+      csv += 'FCF,' + m.fcf.join(',') + '\n';
+      csv += '\nNPV,' + m.npv + '\nIRR,' + (m.irr?m.irr:'') + '\nTerminalValue,'+m.terminalValue+'\nPayback,'+(m.payback||'')+'\n';
+      const blob = new Blob([csv],{type:'text/csv'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a'); a.href=url; a.download='model_export.csv'; a.click(); URL.revokeObjectURL(url);
+    });
+
+    // initial run
+    document.getElementById('run').click();
+  </script>
 </body>
 </html>
